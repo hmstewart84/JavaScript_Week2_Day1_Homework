@@ -59,15 +59,16 @@ var createCatFavFood = function( food ) {
 
 var createCatImg = function( img ) {
   var catImg = document.createElement('img');
-  catImg.innerHTML = img;
+  catImg.width = "500";
+  catImg.src = img;
   return catImg;
 }
 
 var appendElements = function( cats, catUl, catName, catFavFood, catImg ) {
   catName.appendChild(catFavFood);
-  catUl.appendChild(catImg);
   catUl.appendChild(catName);
   cats.appendChild(catUl);
+  catUl.appendChild(catImg);
 }
 
 window.onload = app;
